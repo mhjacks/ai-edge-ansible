@@ -1,7 +1,9 @@
 ---
-- name: Configure kiosk mode on hmi devices
+- name: Configure kiosk mode
   hosts: all
   gather_facts: false
   become: true
   roles:
     - kiosk_mode
+  vars:
+    kiosk_port: 5001

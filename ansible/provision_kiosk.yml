@@ -4,12 +4,12 @@
   become: true
   vars:
     systemd_units_dir: /etc/systemd/system/
-    service_name: inductive-automation-ignition
+    service_name: guiseai-apparel-logo-demo
     container_state: installed
-    container_image: docker.io/inductiveautomation/ignition
-    container_tag: "8.1"
-    container_port_mapping: 8088:8088
-    container_extra_params: --privileged -e GATEWAY_ADMIN_PASSWORD=redhat
+    container_image: quay.io/hybridcloudpatterns/guiseai_apparel_logo_demo
+    container_tag: "obf-v1.0.1"
+    container_port_mapping: 5001:5001
+    container_extra_params: ''
   tasks:
     - name: Configure kiosk mode on hmi devices
       ansible.builtin.import_role:
