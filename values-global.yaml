@@ -1,6 +1,6 @@
 ---
 global:
-  pattern: ansible-edge-gitops
+  pattern: ai-edge-ansible
 
   options:
     useCSV: false
@@ -9,7 +9,7 @@ global:
 
   hub:
     provider: aws
-    storageClassName: gp2
+    storageClassName: gp3
 
 main:
   clusterGroupName: hub
